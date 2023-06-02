@@ -3,7 +3,7 @@ const axios = require('axios');
 const fetch = require('node-fetch');
 
 const bot = new Telegraf('6296517228:AAHeeWF46jJfX_BrM16um8CoG30r-uH5oT8');
-const apiUrl = 'https://pro-api.coinmarketcap.com/v1/cryptocurrency/listings/latest';
+const apiUrl = '';
 // const apiKey = '';
 // bot.use((ctx) => {
 //   ctx.reply('hello');
@@ -34,7 +34,7 @@ bot.command('say', (ctx) => {
 });
 
 bot.command('coinmarketcap', (ctx) => {
-  url = 'https://pro-api.coinmarketcap.com/v1/cryptocurrency/listings/latest';
+  url = '';
   axios.get(url).then((res) => {
     console.log(res.data.coinmarketcap);
     ctx.reply(res.data.coinmarketcap);

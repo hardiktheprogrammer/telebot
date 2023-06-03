@@ -9,17 +9,23 @@ bot.start((ctx) => {
 
 bot.command('alert', (ctx) => {
   //   ctx.reply('🚨  market Alert !!!!');
-  ctx.telegram.sendMessage(ctx.chat.id, ' <code>twitter  </code> 📉  Alert market down 10%', {
+  ctx.telegram.sendMessage(ctx.chat.id, ' 📉  Alert market down 10%', {
     reply_markup: {
       inline_keyboard: [
         [
           {
-            text: 'click me',
-            url: 'https://coinmarketcap.com',
+            text: 'Earn Permission Gitcoin  bounties',
+            url: 'https://bounties.gitcoin.co/explorer?network=mainnet&permission_type=approval&applicants=ALL&order_by=-web3_created',
           },
           {
             text: ' 📈 Trade Now',
             url: 'https://binance.com',
+          },
+        ],
+        [
+          {
+            text: '📉  Check Your Market  !!!!',
+            url: 'https://www.coingecko.com/',
           },
         ],
       ],

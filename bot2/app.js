@@ -8,10 +8,22 @@ bot.start((ctx) => {
 });
 
 bot.command('alert', (ctx) => {
-  ctx.reply('🚨  market Alert !!!!');
-  ctx.telegram.sendContact(ctx.chat.id, {
-    'phone Number': '+919030389190',
-    first_name: 'Hardik sharma',
+  //   ctx.reply('🚨  market Alert !!!!');
+  ctx.telegram.sendMessage(ctx.chat.id, ' <code>twitter  </code> 📉  Alert market down 10%', {
+    reply_markup: {
+      inline_keyboard: [
+        [
+          {
+            text: 'click me',
+            url: 'https://coinmarketcap.com',
+          },
+          {
+            text: ' 📈 Trade Now',
+            url: 'https://binance.com',
+          },
+        ],
+      ],
+    },
   });
 });
 

@@ -10,6 +10,7 @@ bot.start((ctx) => {
 
 bot.command('alert', (ctx) => {
   //   ctx.reply('🚨  market Alert !!!!');
+  getdata();
   ctx.telegram.sendMessage(ctx.chat.id, ' 📉  Alert market down 10%', {
     reply_markup: {
       inline_keyboard: [
